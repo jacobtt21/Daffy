@@ -112,7 +112,13 @@
             document.getElementById(Lmove).focus();
           }
           else {
-            document.getElementById(Rmove).focus();
+            if (field.value === '') {
+              document.getElementById(Rmove).focus();
+            }
+            else {
+              field.value = event.key;
+              document.getElementById(Rmove).focus();
+            }
           }
       }
     </script>
